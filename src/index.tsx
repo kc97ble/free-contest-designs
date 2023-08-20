@@ -1,7 +1,9 @@
-import { createRoot } from "react-dom/client";
-import * as React from "react";
+import { h, render } from "preact";
+import App from "./containers/App";
+import "normalize.css";
+import "@picocss/pico";
+import "./styles.css";
 
 const container = document.createElement("div");
 document.body.appendChild(container);
-const root = createRoot(container);
-root.render(<div>{"Hello!"}</div>);
+render(<App />, container);
