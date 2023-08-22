@@ -1,5 +1,6 @@
 import CoverBuilder from "./CoverBuilder";
 import { h } from "preact";
+import PostBuilder from "./PostBuilder";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         </nav>
       </header>
       <main className="container">
+        <PostBuilder />
         <CoverBuilder />
       </main>
     </div>

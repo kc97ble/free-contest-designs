@@ -1,0 +1,18 @@
+.twoColumns {
+  display: flex;
+  gap: 16px;
+}
+
+.columnLeft {
+  flex: 1 1 50%;
+}
+
+.columnRight {
+  flex: 1 1 50%;
+}
+
+.canvas {
+  width: 100%;
+  aspect-ratio: 1080/1080;
+  border: 1px solid lightgray;
+}
