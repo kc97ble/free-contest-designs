@@ -1,182 +1,48 @@
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-Italic.eot');
-    src: local('CA Saygon Text Italic'), local('CASaygonText-Italic'),
-        url('CASaygonText-Italic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-Italic.woff2') format('woff2'),
-        url('CASaygonText-Italic.woff') format('woff'),
-        url('CASaygonText-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-ExtraBold.eot');
-    src: local('CA Saygon Text ExtraBold'), local('CASaygonText-ExtraBold'),
-        url('CASaygonText-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-ExtraBold.woff2') format('woff2'),
-        url('CASaygonText-ExtraBold.woff') format('woff'),
-        url('CASaygonText-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-SemiBold.eot');
-    src: local('CA Saygon Text SemiBold'), local('CASaygonText-SemiBold'),
-        url('CASaygonText-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-SemiBold.woff2') format('woff2'),
-        url('CASaygonText-SemiBold.woff') format('woff'),
-        url('CASaygonText-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-Light.eot');
-    src: local('CA Saygon Text Light'), local('CASaygonText-Light'),
-        url('CASaygonText-Light.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-Light.woff2') format('woff2'),
-        url('CASaygonText-Light.woff') format('woff'),
-        url('CASaygonText-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-ExtraBoldItalic.eot');
-    src: local('CA Saygon Text ExtraBold Italic'), local('CASaygonText-ExtraBoldItalic'),
-        url('CASaygonText-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-ExtraBoldItalic.woff2') format('woff2'),
-        url('CASaygonText-ExtraBoldItalic.woff') format('woff'),
-        url('CASaygonText-ExtraBoldItalic.ttf') format('truetype');
-    font-weight: 800;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-LightItalic.eot');
-    src: local('CA Saygon Text Light Italic'), local('CASaygonText-LightItalic'),
-        url('CASaygonText-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-LightItalic.woff2') format('woff2'),
-        url('CASaygonText-LightItalic.woff') format('woff'),
-        url('CASaygonText-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-Medium.eot');
-    src: local('CA Saygon Text Medium'), local('CASaygonText-Medium'),
-        url('CASaygonText-Medium.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-Medium.woff2') format('woff2'),
-        url('CASaygonText-Medium.woff') format('woff'),
-        url('CASaygonText-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
+  font-family: "CA Saygon Text";
+  src: url("CASaygonText-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
 }
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-ThinItalic.eot');
-    src: local('CA Saygon Text Thin Italic'), local('CASaygonText-ThinItalic'),
-        url('CASaygonText-ThinItalic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-ThinItalic.woff2') format('woff2'),
-        url('CASaygonText-ThinItalic.woff') format('woff'),
-        url('CASaygonText-ThinItalic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
-}
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-MediumItalic.eot');
-    src: local('CA Saygon Text Medium Italic'), local('CASaygonText-MediumItalic'),
-        url('CASaygonText-MediumItalic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-MediumItalic.woff2') format('woff2'),
-        url('CASaygonText-MediumItalic.woff') format('woff'),
-        url('CASaygonText-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
-}
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-Regular.eot');
-    src: local('CA Saygon Text Regular'), local('CASaygonText-Regular'),
-        url('CASaygonText-Regular.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-Regular.woff2') format('woff2'),
-        url('CASaygonText-Regular.woff') format('woff'),
-        url('CASaygonText-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
-}
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-Thin.eot');
-    src: local('CA Saygon Text Thin'), local('CASaygonText-Thin'),
-        url('CASaygonText-Thin.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-Thin.woff2') format('woff2'),
-        url('CASaygonText-Thin.woff') format('woff'),
-        url('CASaygonText-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
-}
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-SemiBoldItalic.eot');
-    src: local('CA Saygon Text SemiBold Italic'), local('CASaygonText-SemiBoldItalic'),
-        url('CASaygonText-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-SemiBoldItalic.woff2') format('woff2'),
-        url('CASaygonText-SemiBoldItalic.woff') format('woff'),
-        url('CASaygonText-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
-}
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-Bold.eot');
-    src: local('CA Saygon Text Bold'), local('CASaygonText-Bold'),
-        url('CASaygonText-Bold.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-Bold.woff2') format('woff2'),
-        url('CASaygonText-Bold.woff') format('woff'),
-        url('CASaygonText-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-feature-settings: "tnum" on;
-}
-
-@font-face {
-    font-family: 'CA Saygon Text';
-    src: url('CASaygonText-BoldItalic.eot');
-    src: local('CA Saygon Text Bold Italic'), local('CASaygonText-BoldItalic'),
-        url('CASaygonText-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('CASaygonText-BoldItalic.woff2') format('woff2'),
-        url('CASaygonText-BoldItalic.woff') format('woff'),
-        url('CASaygonText-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-    font-feature-settings: "tnum" on;
-}
-
