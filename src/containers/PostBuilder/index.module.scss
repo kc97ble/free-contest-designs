@@ -1,14 +1,5 @@
-.twoColumns {
-  display: flex;
-  gap: 16px;
-}
-
-.columnLeft {
-  flex: 1 1 50%;
-}
-
-.columnRight {
-  flex: 1 1 50%;
+.gridGap {
+  --grid-spacing-vertical: 1rem;
 }
 
 .canvas {

@@ -5,6 +5,7 @@ import { useHash } from "./hooks";
 
 export default function App() {
   const hash = useHash();
+  console.log({ hash });
 
   return (
     <div>

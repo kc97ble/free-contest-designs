@@ -6,7 +6,7 @@ export function useHash() {
   useEffect(() => {
     const listener = () => {
       const newHash = location.hash;
-      hash !== newHash && setHash(newHash);
+      setHash(newHash);
     };
 
     listener();

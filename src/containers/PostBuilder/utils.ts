@@ -40,3 +40,9 @@ export function applyGradientMap(
   ctx.putImageData(imageData, 0, 0);
   return canvas.transferToImageBitmap();
 }
+
+export function excludeNullishElements<T>(
+  array: (T | null | undefined)[]
+): T[] {
+  return array.filter((item): item is T => item != null);
+}
