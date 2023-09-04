@@ -1,7 +1,7 @@
-import { growBy } from "../../../modules/geometry";
-import { Rect, fromRect, toPadd, toRect } from "../../../modules/typing";
+import { growBy } from "./geometry";
+import { Rect, fromRect, toPadd, toRect } from "./geometry";
 
-type Asset = {
+export type Asset = {
   imageBitmap: ImageBitmap | null;
   rect: Rect;
 };

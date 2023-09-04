@@ -1,4 +1,4 @@
-import { Rgba, fromRgba } from "../../modules/typing";
+import { Rgba, fromRgba } from "../../utils/geometry";
 
 export function assert(condition: unknown, message: string): asserts condition {
   if (!condition) {

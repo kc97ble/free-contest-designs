@@ -16,3 +16,6 @@ export const fromPadd = ({ t, r, b, l }: Padd): Quad => [t, r, b, l];
 export const toPadd = ([t, r, b, l]: Quad): Padd => ({ t, r, b, l });
 export const fromRgba = ({ r, g, b, a }: Rgba): Quad => [r, g, b, a];
 export const toRgba = ([r, g, b, a]: Quad): Rgba => ({ r, g, b, a });
+
+export const growBy = ({ x, y, w, h }: Rect, { t, r, b, l }: Padd) =>
+  toRect([x - l, y - t, w + l + r, h + t + b]);

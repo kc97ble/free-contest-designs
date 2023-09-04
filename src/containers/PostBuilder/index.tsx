@@ -2,7 +2,7 @@ import { h } from "preact";
 import { useMemo, useState } from "preact/hooks";
 import * as styles from "./index.module.scss";
 import { useMemoAsync } from "./hooks/useMemoAsync";
-import { applyGradientMap, assert } from "./utils";
+import { applyGradientMap } from "./utils";
 import { useFieldNumber } from "./hooks/useFieldNumber";
 import {
   Area,
@@ -13,9 +13,9 @@ import {
   toPadd,
   toRect,
   toRgba,
-} from "../../modules/typing";
-import { growBy } from "../../modules/geometry";
-import { AssetFactory } from "./classes/AssetFactory";
+} from "../../utils/geometry";
+import { growBy } from "../../utils/geometry";
+import { AssetFactory } from "../../utils/assets";
 import { useFieldString } from "./hooks/useFieldString";
 import { loadImage } from "../../utils";
 
