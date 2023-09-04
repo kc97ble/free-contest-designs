@@ -2,4 +2,11 @@
   width: 100%;
   aspect-ratio: 2048/900;
   border: 1px solid lightgray;
+  margin-bottom: 1rem;
+}
+
+.textarea {
+  min-height: 240px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }

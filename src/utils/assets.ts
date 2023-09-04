@@ -1,10 +1,20 @@
-import { growBy } from "./geometry";
+import { Padd, growBy, growFromCenter } from "./geometry";
 import { Rect, fromRect, toPadd, toRect } from "./geometry";
 
 export type Asset = {
   imageBitmap: ImageBitmap | null;
   rect: Rect;
 };
+
+export function drawAsset(
+  ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+  asset: Asset,
+  dx: number,
+  dy: number
+) {
+  if (!asset.imageBitmap) return;
+  ctx.drawImage(asset.imageBitmap, dx - asset.rect.x, dy - asset.rect.y);
+}
 
 export class AssetFactory {
   private ctx: OffscreenCanvasRenderingContext2D;
@@ -86,10 +96,8 @@ export class AssetFactory {
     let dy = y0;
 
     for (const item of content) {
-      const [sx, sy, sw, sh] = fromRect(item.rect);
-      item.imageBitmap &&
-        this.ctx.drawImage(item.imageBitmap, sx, sy, sw, sh, x0, dy, sw, sh);
-      dy += sh;
+      drawAsset(this.ctx, item, x0, dy);
+      dy += item.rect.h;
     }
 
     const imageBitmap = this.ctx.canvas.transferToImageBitmap();
@@ -114,25 +122,50 @@ export class AssetFactory {
     let dx = x0;
 
     for (const item of content) {
-      const [sx, sy, sw, sh] = fromRect(item.rect);
-      item.imageBitmap &&
-        this.ctx.drawImage(item.imageBitmap, sx, sy, sw, sh, dx, y0, sw, sh);
-      dx += sw;
+      drawAsset(this.ctx, item, dx, y0);
+      dx += item.rect.w;
     }
 
     const imageBitmap = this.ctx.canvas.transferToImageBitmap();
     const rect = toRect([x0, y0, w1, h1]);
     return { imageBitmap, rect };
   }
-}
 
-export function drawAsset(
-  ctx: CanvasRenderingContext2D,
-  asset: Asset,
-  dx: number,
-  dy: number
-) {
-  const { x, y, w, h } = asset.rect;
-  if (!asset.imageBitmap) return;
-  ctx.drawImage(asset.imageBitmap, x, y, w, h, dx, dy, w, h);
+  box({
+    content,
+    backgroundColor,
+    padding,
+    minHeight,
+  }: {
+    content: Asset;
+    backgroundColor: string;
+    padding: Padd;
+    minHeight: number;
+  }) {
+    this.clear();
+
+    // canvas width height
+    const w0 = this.ctx.canvas.width;
+    const h0 = this.ctx.canvas.height;
+
+    const r0 = growFromCenter(
+      toRect([w0 / 2, h0 / 2, 0, 0]),
+      content.rect.w,
+      content.rect.h
+    );
+    const r1 = growBy(r0, padding);
+    const r2 = growFromCenter(r1, 0, Math.max(minHeight - r1.h, 0));
+    this.ctx.fillStyle = backgroundColor;
+    this.ctx.fillRect(r2.x, r2.y, r2.w, r2.h);
+
+    const r3 = growFromCenter(
+      toRect([w0 / 2, h0 / 2, 0, 0]),
+      content.rect.w,
+      content.rect.h
+    );
+    drawAsset(this.ctx, content, r3.x, r3.y);
+
+    const imageBitmap = this.ctx.canvas.transferToImageBitmap();
+    return { imageBitmap, rect: r2 };
+  }
 }

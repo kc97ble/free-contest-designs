@@ -61,20 +61,17 @@ export default function PostBuilder() {
 
   const [pngFreeContestNet] = useMemoAsync(async () => {
     const img = await loadImage(url_pngFreeContestNet.toString());
-    const imageBitmap = await createImageBitmap(img);
-    return imageBitmap;
+    return await createImageBitmap(img);
   }, []);
 
   const [pngWhiteToBlack] = useMemoAsync(async () => {
     const img = await loadImage(url_pngWhiteToBlack.toString());
-    const imageBitmap = await createImageBitmap(img);
-    return imageBitmap;
+    return await createImageBitmap(img);
   }, []);
 
   const [pngLogo] = useMemoAsync(async () => {
     const img = await loadImage(url_pngLogo.toString());
-    const imageBitmap = await createImageBitmap(img);
-    return imageBitmap;
+    return await createImageBitmap(img);
   }, []);
 
   const [imageBitmapAfterGradientMap] = useMemoAsync(

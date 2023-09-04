@@ -19,3 +19,5 @@ export const toRgba = ([r, g, b, a]: Quad): Rgba => ({ r, g, b, a });
 
 export const growBy = ({ x, y, w, h }: Rect, { t, r, b, l }: Padd) =>
   toRect([x - l, y - t, w + l + r, h + t + b]);
+export const growFromCenter = ({ x, y, w, h }: Rect, dw: number, dh: number) =>
+  toRect([x - dw / 2, y - dh / 2, w + dw, h + dh]);

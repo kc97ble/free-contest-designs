@@ -1,4 +1,4 @@
-import { Inputs, useEffect, useReducer, useState } from "preact/hooks";
+import { Inputs, useEffect, useState } from "preact/hooks";
 
 type State<T> = { data?: T; error?: unknown };
 
@@ -17,7 +17,6 @@ export function useMemoAsync<T>(
     (async () => {
       try {
         setState({});
-        console.log("calling factory");
         const result = await factory(signal);
         signal.throwIfAborted();
         setState({ data: result });
@@ -27,10 +26,7 @@ export function useMemoAsync<T>(
       }
     })();
 
-    return () => {
-      console.log("leave");
-      abortController.abort(new Aborted());
-    };
+    return () => abortController.abort(new Aborted());
   }, inputs);
 
   return [state.data, state.error];
