@@ -15,7 +15,7 @@ import {
   toRgba,
 } from "../../utils/geometry";
 import { growBy } from "../../utils/geometry";
-import { AssetFactory } from "../../utils/assets";
+import { AssetFactory, drawAsset } from "../../utils/assets";
 import { useFieldString } from "./hooks/useFieldString";
 import { loadImage } from "../../utils";
 
@@ -210,12 +210,7 @@ export default function PostBuilder() {
     }
 
     if (layerText) {
-      const {
-        imageBitmap,
-        rect: { x, y, w, h },
-      } = layerText;
-      imageBitmap &&
-        ctx.drawImage(imageBitmap, x, y, w, h, 76 * S, H * S - h, w, h);
+      drawAsset(ctx, layerText, 76 * S, H * S - layerText.rect.h);
     }
 
     if (pngFreeContestNet) {

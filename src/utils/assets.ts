@@ -125,3 +125,14 @@ export class AssetFactory {
     return { imageBitmap, rect };
   }
 }
+
+export function drawAsset(
+  ctx: CanvasRenderingContext2D,
+  asset: Asset,
+  dx: number,
+  dy: number
+) {
+  const { x, y, w, h } = asset.rect;
+  if (!asset.imageBitmap) return;
+  ctx.drawImage(asset.imageBitmap, x, y, w, h, dx, dy, w, h);
+}
