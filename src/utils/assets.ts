@@ -53,12 +53,13 @@ export class AssetFactory {
     this.ctx.fillText(content, x, y);
 
     const metrics = this.ctx.measureText(content);
+    console.log(metrics);
     const rect = growBy(
       toRect([x, y, 0, 0]),
       toPadd([
-        metrics.fontBoundingBoxAscent,
+        fontSize / 2,
         metrics.actualBoundingBoxRight,
-        metrics.fontBoundingBoxDescent,
+        fontSize / 2,
         metrics.actualBoundingBoxLeft,
       ])
     );
